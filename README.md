@@ -2,7 +2,7 @@
 
 ## What this is
 
-A small lab I built while studying for AZ-104. I wanted to actually build a segmented network instead of just reading about NSGs and hoping it stuck — so I put up a web-facing VM and a data VM, locked the data one down so only the web tier could talk to it, then used Network Watcher to prove it actually worked instead of just assuming it did.
+A small lab I built while studying for AZ-104. I wanted to build a segmented network instead of just reading about NSGs and hoping it stuck — so I put up a web-facing VM and a data VM, and locked the data one down so only the web tier could talk to it.
 
 ## Setup
 
@@ -41,9 +41,4 @@ Everything else gets caught by the default deny rule. No exceptions carved out f
 
 - How subnetting actually works when you're not just reading about CIDR ranges
 - Writing NSG rules with a deny-by-default mindset instead of bolting on restrictions after the fact
-- Not trusting my own assumptions about a "secure" setup until I tested it
 - Basic separation between what's public-facing and what shouldn't be
-
-## A note on cost
-
-Both VMs were B1s size and I tore them down right after testing. This wasn't left running — just built, tested, documented, deleted.
